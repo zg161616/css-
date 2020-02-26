@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").mouseover(function(){
+    $("p").css("background-color","yellow");
+  });
+  $("p").mouseout(function(){
+    $("p").css("background-color","lightgray");
+  });
+});
+
+</script>
+</head>
+<body>
+
+   <form  action="" >
+            <!--<div class="layui-form-item">-->
+
+            <!--</div>-->
+            <div class="layui-form-item" style="margin: 0 500px">
+                <div class="layui-inline" style="width:40px;">
+                    <span class="s1 " style="font-size: 15px;" id="s_category">品名</span>
+                </div>
+                <div class="layui-inline" style="width:40px">
+                    <span class="s2 " style="font-size: 15px;" id="s_variety">类别</span>
+                </div>
+                <div class="layui-inline" style="width:40px">
+                    <span class="s3 " style="font-size: 15px;" id="s_area">产地</span>
+                </div>
+                <div class="layui-inline" style="width:40px">
+                    <span class="s4 " style="font-size: 15px;" id="s_price">价格</span>
+                </div>
+            </div>
+        </form>
+		
+		
+		<div id="sc" style="display: none;" class="menu_c">
+    <div style="color:black;padding:5px;height: 50px"><span class="ic">品种</span><a class="layui-btn layui-btn-xs layui-btn-normal" style="float:right;" id="button_c">重置</a></div>
+    <div class="link-top"></div>
+    <div>
+        #for(x:c_list)
+        <span class="menu_item menu_item_c" val="category=#(x.category)"><a href="#" class="ic" #if(category==x.category) style="color:orange"#end>#(x.category)</a></span>
+        #end
+    </div>
+</div>
+
+<div id="sv" style="display: none;" class="menu_v">
+    <div style="color:black;padding:5px;height: 50px" class="ic"><span class="ic">类别</span><a class="layui-btn layui-btn-xs layui-btn-normal" style="float:right;" id="button_v">重置</a></div>
+    <div class="link-top"></div>
+    <div>
+        #for(x:v_list)
+        <span class="menu_item menu_item_v" val="variety=#(x.variety)"><a href="#" class="ic" #if(variety==x.variety) style="color:orange"#end>#(x.variety)</a></span>
+        #end
+    </div>
+</div>
+
+<div id="sa" style="display: none;" class="menu_a">
+    <div style="color:black;padding:5px;height: 50px" class="ic"><span class="ic">产地</span><a class="layui-btn layui-btn-xs layui-btn-normal" style="float:right;" id="button_a">重置</a></div>
+    <div class="link-top"></div>
+    <div>
+        #for(x:a_list)
+        <span class="menu_item menu_item_a" val="area=#(x.area)"><a href="#" class="ic" #if(area==x.area) style="color:orange"#end>#(x.area)</a></span>
+        #end
+    </div>
+</div>
+
+<div id="sp" style="display: none;" class="menu_s">
+    <div>
+        <span class=" menu_item_s" val="order=1"   ><a href="#" class="ic"  style="color:orange" >单价从低到高</a></span>
+    </div>
+    <div>
+        <span class=" menu_item_s" val="order=2"><a href="#" class="ic" >单价从高到低</a></span>
+    </div>
+    <div>
+        <span class=" menu_item_s" val="order=3"><a href="#" class="ic" >总价从低到高</a></span>
+    </div>
+    <div>
+        <span class=" menu_item_s" val="order=4"><a href="#" class="ic" >总价从高到低</a></span>
+    </div>
+</div>
+<p>鼠标移动到这个段落上。</p>
+
+</body>
+</html>
